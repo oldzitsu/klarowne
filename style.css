@@ -5,6 +5,7 @@
 --primary: #550FDE;
 --highlight-color: #7B84EB; /* Define the highlight color */
 --background-color: #000;
+--background-tile: #F5F5F5;
 --text-color: #fff;
 --card-background: #F5F5F5;
 --card-shadow: rgba(0, 0, 0, 0.1);
@@ -433,57 +434,404 @@ p {
 
 
 #results-section {
-    padding: 60px 20px;
+    padding-top: 60px;
     text-align: center;
-    background: url(bckground-reults.png);
+    align-items: center;
+    background: url('Mask.png') no-repeat center bottom; 
+    background-size: cover;     
     width: 100%;
+    height: auto;
 }
 
 #results-section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
+    font-size: 40px;
+    margin-bottom: 34px;
+    padding-left: 200px;
+    width: 900px;
+    text-align: left;
 }
 
 .results-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .image-container img {
-    max-width: 100%;
-    height: auto;
+    width: 479.606px;
+    height: 345.169px;
 }
-
-.stats-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 300px;
-}
-
 .stat-card {
     background-color: var(--card-background);
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--card-shadow);
     padding: 20px;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 520px;
+    padding: 64px 32px;
+    height: auto; /* Automatyczna wysokość */
+    margin-bottom: 20px; /* Dodaj przerwę między kartami */
+    gap: 20px
 }
 
 .stat-card h3 {
-    font-size: 24px;
-    color: var(--highlight-color);
-    margin-bottom: 10px;
+    font-size: 48px;
+    color: var(--primary);
+    margin: 0 20px 0 0; /* Dodaj margines między tytułem a opisem */
+    flex-shrink: 0;
 }
 
 .stat-card p {
-    font-size: 16px;
-    color: #555;
+    font-size: 18px; /* Zmniejszony rozmiar tekstu */
+    margin: 0;
+    flex: 1 0 0;
+    text-align: left;
 }
-
 
 
 
 
 /* Responsive layout */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 20px 100px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .book-call-btn-small {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .trusted-section .logos img {
+        max-height: 60px;
+        max-width: 80px;
+    }
+
+    .section-top {
+        width: calc(100% - 100px);
+        height: auto;
+        padding: 40px;
+    }
+
+    .section-top-txt {
+        width: 100%;
+    }
+
+    .section-top-txt h2 {
+        font-size: 32px;
+    }
+
+    #why-wordpress {
+        padding: 150px 20px;
+        height: auto;
+    }
+
+    #why-wordpress h2 {
+        width: 100%;
+        padding: 80px 0 50px 0;
+    }
+
+    .feature {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .text p {
+        width: 100%;
+    }
+
+    #wordpress-guidance {
+        padding: 80px 20px;
+    }
+
+    .wp-guidance-text {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-content {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    #results-section {
+        padding: 40px 20px;
+    }
+
+    #results-section h2 {
+        padding-left: 0;
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .results-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .stat-card {
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .stat-card h3 {
+        font-size: 36px;
+    }
+
+    .stat-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .book-call-btn-small {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+        width: 100%;
+    }
+
+    .trusted-section .logos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .trusted-section .logos img {
+        max-height: 40px;
+        max-width: 60px;
+    }
+
+    .section-top {
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+
+    .section-top-txt h2 {
+        font-size: 28px;
+    }
+
+    #why-wordpress h2 {
+        padding: 60px 0 30px 0;
+        font-size: 28px;
+    }
+
+    .feature {
+        padding: 10px;
+    }
+
+    .text {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #wordpress-guidance h2 {
+        font-size: 32px;
+    }
+
+    .card-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-content {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+
+    #results-section {
+        padding: 20px 10px;
+    }
+
+    .results-container {
+        gap: 20px;
+    }
+
+    .stat-card {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .stat-card h3 {
+        font-size: 28px;
+    }
+
+    .stat-card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .book-call-btn-small {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .trusted-section {
+        height: auto;
+        padding: 10px;
+    }
+
+    .trusted-section .logos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .trusted-section .logos img {
+        max-height: 30px;
+        max-width: 40px;
+    }
+
+    .section-top {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .section-top-txt h2 {
+        font-size: 24px;
+    }
+
+    #why-wordpress {
+        padding: 100px 10px;
+    }
+
+    #why-wordpress h2 {
+        padding: 40px 0 20px 0;
+        font-size: 24px;
+    }
+
+    .feature {
+        padding: 5px;
+    }
+
+    .text {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .text p {
+        width: 100%;
+    }
+
+    #wordpress-guidance {
+        padding: 60px 10px;
+    }
+
+    #wordpress-guidance h2 {
+        font-size: 28px;
+    }
+
+    .card-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .card-content {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 10px;
+    }
+
+    #results-section {
+        padding: 10px 5px;
+    }
+
+    .results-container {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .stat-card h3 {
+        font-size: 24px;
+    }
+
+    .stat-card p {
+        font-size: 10px;
+    }
+}
